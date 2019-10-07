@@ -44,7 +44,7 @@ You can create the `kubeconfig <https://docs.aws.amazon.com/eks/latest/userguide
 .. code-block:: bash
     aws eks --region <region_name> update-kubeconfig --name <cluster_name>
 
-Verify Kubernetes access
+Verify Kubernetes Access
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
 To confirm your access to online nodes, run: 
