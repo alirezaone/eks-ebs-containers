@@ -46,7 +46,9 @@ Create Your kubeconfig File
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 You can create the `kubeconfig <https://docs.aws.amazon.com/eks/latest/userguide/create-kubeconfig.html>`_ file by AWS CLI or manaually. On CLI, simply run ``update-kubeconfig`` command:
+
 .. code-block:: bash
+
     aws eks --region <region_name> update-kubeconfig --name <cluster_name>
 
 Verify Kubernetes Access
