@@ -2,8 +2,8 @@ imagefs and Persistent Volume Claim
 ------------------------------------
 EKS supports two types of file systems: 
 
-1. ``nodefs`` for pod-backing EC2 instances root volumes,
-2. ``imagefs`` for the containers, which may be used to store the logs and caches for your application. 
+1. ``nodefs`` for pods scheduling EC2 nodes root volumes,
+2. ``imagefs`` for the containers, which may be used to store the logs and transactions.
 
 
 Now ``imagefs`` by defualt is an ephemeral storage that lives as long as the container does. To persist its data when the container dies or terminates, a storage class model needs to be brought into EKS that is poised to create persistent storage. Within the AWS environment, you have access to different EBS types, and namely 
@@ -50,6 +50,7 @@ Now let's see the ``/www`` directory once this pod is up and running to see how 
 
 .. code-block:: bash
 
+    kubectl get pvc -o wide     
     kubectl exec -it $(kubectl get pod -l app=nginx-volume -o jsonpath={.items..metadata.name}) -- df -h /www
 
 This gives back the disk information in a human-readable fashion for the mounted pv of the specific pod for this Deployment. 
