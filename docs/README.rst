@@ -54,7 +54,7 @@ You can create the `kubeconfig <https://docs.aws.amazon.com/eks/latest/userguide
 Verify Kubernetes Access
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
-To confirm your access to scheduled podes, run: 
+To confirm your access to the scheduled pods, run: 
 
 .. code-block:: bash
 
