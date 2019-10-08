@@ -60,8 +60,8 @@ To confirm your access to online nodes, run:
 
     kubectl get nodes
 
-Here, a manifest like a simple hostname service is launched where it creates a little micro webserver with a *www directory* in it. Look up its ``yaml`` for the full disclosure: 
+For a demo here, an ``nginx-volume`` built from a ``Deployment API`` is used to create a stateless web server. This claims and provisions an EBS/gp2 storage for a ``/www`` directory in it. 
 
 .. code-block:: bash
 
-    kubectl apply -f hostname.yaml
+    kubectl apply -f nginx-volume.yaml
