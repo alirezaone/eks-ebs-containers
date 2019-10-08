@@ -21,8 +21,8 @@ Persistent Volume
 
 Now with ``gp2`` class in place, and *Retain* as its reclaim policy, a standard Kubernetes mapping can be used to attach storage that maintains persistence even after deleting the ``PersistentVolumeClaim (pvc)`` along with the pod that claimed the storage. 
 
-pvc:                  is a claim, the capability that connects the pod with the persistent volume. 
-pv:                   the persistent volume is the underlying actual storage connection. That's the element that's going to remain persistently.
+- pvc:                  is a claim, the capability that connects the pod with the persistent volume. 
+- pv:                   the persistent volume is the underlying actual storage connection. That's the element that's going to remain persistently.
 
 Mounting in Action
 ^^^^^^^^^^^^^^^^^^
@@ -52,6 +52,6 @@ Now let's see the ``/www`` directory once this pod is up and running to see how 
 
     kubectl exec -it $(kubectl get pod -l app=nginx-volume -o jsonpath={.items..metadata.name}) -- df -h /www
 
-That gives back the disk information in a human-readable fashion for the mounted pv of the specific pod for this Deployment. 
+This gives back the disk information in a human-readable fashion for the mounted pv of the specific pod for this Deployment. 
 
 
