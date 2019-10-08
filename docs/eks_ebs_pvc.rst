@@ -33,7 +33,7 @@ Mounting in Action
 
     kubectl apply -f nginx-volume.yaml
 
-For the most part this looks like any other Deployment up to the point of ``spec`` for ``volumes``, and there's a volume that is a ``persistentVolumeClaim``, and all it does is it associates the ``nginx-pvc`` with this particular volume name internally, and then within the container, the ``nginx-pvc``, mapped to the volume name, is going to be mounted on ``/www``. 
+For the most part this looks like any other Deployment up to the point of ``spec`` for ``volumes`` provisioned through the ``persistentVolumeClaim``. All it does is it associates the ``nginx-pvc`` with this particular volume name internally. Then, within the container, the ``nginx-pvc``, mapped to the volume name, is going to be mounted on ``/www``. 
 
 .. code-block:: yaml
 
