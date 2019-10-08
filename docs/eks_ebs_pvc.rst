@@ -7,7 +7,7 @@ EKS supports two types of file systems:
 
 
 Now ``imagefs`` by defualt is an ephemeral storage that lives as long as the container does. To persist its data when the container dies or terminates, a storage class model needs to be brought into EKS that is poised to create persistent storage. Within the AWS environment, you have access to different EBS types, and namely 
-the default volume type *General Purpose SSD* (`gp2 <https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html>'_). 
+the default volume type *General Purpose SSD* (`gp2 <https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html>`_). 
 
 The ``ebs-gp2-storage.yaml`` here is a very lightweight manifest to create storage class. The key here is the annotation put into the metadata section that creates a default class of *true* for this particular storage class:
 
