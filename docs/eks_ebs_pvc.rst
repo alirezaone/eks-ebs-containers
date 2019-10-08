@@ -53,6 +53,6 @@ Now let's see the ``/www`` directory once this pod is up and running to see how 
     kubectl get pvc -o wide     
     kubectl exec -it $(kubectl get pod -l app=nginx-volume -o jsonpath={.items..metadata.name}) -- df -h /www
 
-This gives back the disk information in a human-readable fashion for the mounted pv of the specific pod for this Deployment. 
+This gives back the disk information in a human-readable fashion for the mounted ``pv`` of the specific pod for this Deployment. 
 
 

@@ -54,7 +54,7 @@ You can create the `kubeconfig <https://docs.aws.amazon.com/eks/latest/userguide
 Verify Kubernetes Access
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
-To confirm your access to online nodes, run: 
+To confirm your access to scheduled podes, run: 
 
 .. code-block:: bash
 
@@ -63,7 +63,7 @@ To confirm your access to online nodes, run:
 Add EBS In
 ^^^^^^^^^^
 
-Pick a classical Kubernetes API and attach EBS storage into the containers. Here, an ``nginx-volume`` Deployment manifest to create an instance of ``nginx`` web server is used. This claims and provisions an EBS/gp2 storage for a ``/www`` directory in it. 
+Pick a classical Kubernetes API and attach EBS storage into the containers. Here, an ``nginx-volume`` Deployment manifest to create an instance of ``nginx`` web server is used. This claims and provisions an EBS/gp2 storage for a ``/www`` directory in ``imagefs``. 
 
 .. code-block:: bash
 
