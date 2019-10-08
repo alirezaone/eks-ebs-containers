@@ -21,8 +21,8 @@ Persistent Volume
 
 Now with ``gp2`` class in place, and *Retain* as its reclaim policy, a standard Kubernetes mapping can be used to attach storage that maintains persistence even after deleting the ``PersistentVolumeClaim (pvc)`` along with the pod that claimed the storage. 
 
-- pvc:                  is a claim, the capability that connects the pod with the persistent volume. 
-- pv:                   the persistent volume is the underlying actual storage connection. That's the element that's going to remain persistently.
+- ``pvc``:                  is a claim, the capability that connects the pod with the persistent volume. 
+- ``pv``:                   the persistent volume is the underlying actual storage connection. That's the element that's going to remain persistently.
 
 Mounting in Action
 ^^^^^^^^^^^^^^^^^^
@@ -46,7 +46,7 @@ For the most part this looks like any other Deployment up to the point of ``spec
             name: nginx-pvc
 
 
-Now let's see the ``/www`` directory once this pod is up and running to see how large this volume actually is. Now if we also look at the pvc, this is what actually creates the underlying storage. 
+Now let's see the ``/www`` directory once this pod is up and running to see how large this volume actually is. Now if we also look at the ``pvc``, this is what actually creates the underlying storage. 
 
 .. code-block:: bash
 
