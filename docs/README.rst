@@ -54,7 +54,7 @@ You can create the `kubeconfig <https://docs.aws.amazon.com/eks/latest/userguide
 Verify Kubernetes Access
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
-Once the worker nodes are online, you can look into ``kube-scheduler`` to see how it distributes pods to different nodes. To confirm your access to the pods, run: 
+Once the worker nodes are online, you can look into ``kube-scheduler`` to see how it's distributed pods to different nodes. To confirm your access to the pods, run: 
 
 .. code-block:: bash
 
