@@ -58,9 +58,12 @@ To confirm your access to online nodes, run:
 
 .. code-block:: bash
 
-    kubectl get nodes
+    kubectl get pods -o wide  
+  
+Add EBS In
+^^^^^^^^^^
 
-For a demo here, an ``nginx-volume`` built from a ``Deployment API`` is used to create a stateless web server. This claims and provisions an EBS/gp2 storage for a ``/www`` directory in it. 
+Pick a classical Kubernetes API and attach EBS storage into the containers. Here, an ``nginx-volume`` Deployment manifest to create an instance of ``nginx`` web server is used. This claims and provisions an EBS/gp2 storage for a ``/www`` directory in it. 
 
 .. code-block:: bash
 

@@ -2,7 +2,7 @@ imagefs and Persistent Volume Claim
 ------------------------------------
 EKS supports two types of file systems: 
 
-1. ``nodefs`` for pods scheduling EC2 nodes root volumes,
+1. ``nodefs`` for pods-scheduling EC2 nodes root volumes,
 2. ``imagefs`` for the containers, which may be used to store the logs and transactions.
 
 
@@ -46,7 +46,7 @@ For the most part this looks like any other Deployment up to the point of ``spec
             name: nginx-pvc
 
 
-Now let's see the ``/www`` directory once this pod is up and running to see how large this volume actually is. Now if we also look at the ``pvc``, this is what actually creates the underlying storage. 
+Now let's see the ``/www`` directory once this pod is up and running to see how large this volume actually is. If you also look at the ``pvc``, this is what actually creates the underlying storage. 
 
 .. code-block:: bash
 
