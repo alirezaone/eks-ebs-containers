@@ -27,7 +27,7 @@ Now with ``gp2`` class in place, and *Retain* as its reclaim policy, a standard 
 Mounting in Action
 ^^^^^^^^^^^^^^^^^^
 
-:``nginx-volume.yaml``: In a ``Deployment API`` for a web server that runs the ``nginx:1.7.9`` Docker image, a 3Gi volume is mounted into its web directory. The ``Service`` domain on top routes the request to the Deployment. 
+:``nginx-volume.yaml:`` In a ``Deployment API`` for a web server that runs the ``nginx:1.7.9`` Docker image, a 3Gi volume is mounted into its web directory. The ``Service`` domain on top routes the request to the Deployment. 
 
 .. code-block:: bash
 
