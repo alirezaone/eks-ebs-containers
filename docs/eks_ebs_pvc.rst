@@ -2,7 +2,7 @@ imagefs and Persistent Volume Claim
 ------------------------------------
 EKS supports two types of file system: 
 
-1. ``nodefs`` for pods-scheduling EC2 nodes root volumes,
+1. ``nodefs`` for pods-scheduling EC2 nodes' root volumes,
 2. ``imagefs`` for the containers, which may be used to store the logs and transactions.
 
 
@@ -53,6 +53,6 @@ Now let's see the ``/www`` directory once this pod is up and running to see how 
     kubectl get pvc -o wide     
     kubectl exec -it $(kubectl get pod -l app=nginx-volume -o jsonpath={.items..metadata.name}) -- df -h /www
 
-The ``exec`` gets a shell into the running pod ``nginx-volume`` and gives the disk information in a human-readable fashion for the mounted ``pv``.
+The ``exec`` gets a shell into the running container ``nginx-volume`` and gives the disk information in a human-readable fashion for the mounted ``pv``.
 
 
