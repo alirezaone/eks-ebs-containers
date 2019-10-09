@@ -2,8 +2,8 @@ imagefs and Persistent Volume Claim
 ------------------------------------
 EKS supports two types of file system: 
 
-1. ``nodefs`` for pods-scheduling EC2 nodes' root volumes,
-2. ``imagefs`` for the containers, which may be used to store the logs and transactions.
+1. ``nodefs`` for root volumes of the provisioned EC2 instances,
+2. ``imagefs`` for the containers to store the application logs and transactions.
 
 
 Now ``imagefs`` is ephemeral storage by default that lives as long as the container does. To persist its data when the container dies or terminates, a storage class model needs to be brought into EKS that is poised to create persistent storage. Within the AWS environment, you have access to different EBS types, and namely 
