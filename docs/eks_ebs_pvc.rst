@@ -33,7 +33,7 @@ Mounting in Action
 
     kubectl apply -f nginx-volume.yaml
 
-For the most part this looks like any other Deployment up to the point of ``spec`` for ``volumes`` provisioned through the ``persistentVolumeClaim``. All it does is it associates the ``nginx-pvc`` with this particular volume name internally. Then, within the container file system, the ``nginx-pvc``, mapped to the volume name, is going to be mounted on ``/www``. 
+For the most part, this looks like any other Deployment up to the point of ``spec`` for ``volumes`` provisioned through the ``persistentVolumeClaim``. All it does is it associates the ``nginx-pvc`` with this particular volume name internally. Then, within the container file system, the ``nginx-pvc``, mapped to the volume name, is going to be mounted on ``/www``. 
 
 .. code-block:: yaml
 
@@ -53,6 +53,6 @@ Now let's see the ``/www`` directory once this pod is up and running to see how 
     kubectl get pvc -o wide     
     kubectl exec -it $(kubectl get pod -l app=nginx-volume -o jsonpath={.items..metadata.name}) -- df -h /www
 
-The ``exec`` gets a shell into the running container ``nginx-volume`` and gives the disk information in a human-readable fashion for the mounted ``pv``.
+The ``exec`` gets a shell into the running container of the ``nginx-volume`` and gives the disk information in a human-readable fashion for the mounted ``pv``.
 
 
